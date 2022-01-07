@@ -7,7 +7,6 @@ const indexController = require('./controllers/earthquakeController')
 app.use(cors())
 app.get('/', indexController.index)
 
-const PORT = 8000
-http.listen(PORT, function () {
+http.listen(process.env.PORT || 3000, function () {
   console.log('server listen on port : 8000')
 })
